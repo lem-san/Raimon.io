@@ -1,0 +1,11 @@
+.information {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #222;
+    width: 100%;
+    text-align: left;
+    padding: 50px 500px 0 150px;
+}
+

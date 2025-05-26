@@ -1,3 +1,16 @@
 :root{
     background-color: rgb(253, 247, 239);
 }
+.mainContent {
+    padding-top: 140px;
+    display: flex;
+    flex-direction: row; 
+    line-height: 1.6;
+}
+
+heading {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 100;
+    font-style: normal;
+}

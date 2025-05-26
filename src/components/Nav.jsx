@@ -13,12 +13,12 @@ export default function Nav() {
     }
 
     function handleMode() {
-        setColorMode(prevMode => prevMode === "light" ? "dark" : "dark")
+        setColorMode(prevMode => prevMode === "light" ? "dark" : "light")
         document.body.classList.toggle("dark")
     }
 
     return (
-        <div className='navBar'>
+        <header className='navBar'>
             <img className='logo' src={logo} alt='logo' onClick={handleHome}/>
             <div className='darkModeToggle'>
                 <input type="checkbox" class="checkbox" id="checkbox" onChange={handleMode} />
@@ -28,6 +28,6 @@ export default function Nav() {
                     <span class="ball"></span>
                 </label>
             </div>
-        </div>           
+        </header>           
 )
 }
