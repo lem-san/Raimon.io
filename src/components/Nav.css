@@ -27,26 +27,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px 40px;
-    background: none;
+    background: rgb(253, 247, 239);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     width: 100%;
-
-    -webkit-transition: all .800s;
-    -moz-transition: all .800s;
-    -o-transition: all .800s;
-    transition: all .800s;
-}
-
-.navBar.transparent {
-    position: absolute;
-    background-color: transparent;
-    border-bottom: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
 }
 
 .navBar.fixed.shadow-after-3:before {
@@ -64,13 +50,17 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(253, 247, 239);
   margin: 0;
+}
+
+body.light, .navBar.light {
+  background-color: rgb(253, 247, 239);
   transition: background 0.2s linear;
 }
 
 body.dark, .navBar.dark {
-    background-color: #1a1c20;
+  background-color: #1a1c20;
+  transition: background 0.2s linear;
 }
 
 .checkbox {

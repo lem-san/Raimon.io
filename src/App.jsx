@@ -7,7 +7,6 @@ import Employment from './components/Employment'
 
 function App() {
 
-
   return (
     <>
       <Nav />

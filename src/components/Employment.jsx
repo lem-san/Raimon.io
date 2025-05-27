@@ -13,7 +13,7 @@ export default function Employment(){
                             <h3>{entry.title}</h3>
                             <p>{entry.company}</p>
                             <p>{entry.desc}</p>
-                            
+                            <p>{entry.skills}</p>
                         </div>
                     </div>
                 </div>
