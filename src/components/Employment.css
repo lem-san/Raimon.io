@@ -1,0 +1,41 @@
+.employmentCard {
+    display: flex;
+    font-size: 14px;
+}
+
+.employmentDates {
+    padding-right: 40px;
+    width: 200px
+}
+
+.skillsContainer > li {
+    list-style: none; 
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    border-radius: 2em;
+    margin: 0 0.6em 0.6em 0;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+#softSkills {
+    background-color: rgb(255, 233, 205);
+    color: rgb(221, 153, 51);
+}
+
+#technicalSkills {
+    background-color: rgb(196, 255, 239);
+    color: rgb(27, 212, 163);
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;      
+    overflow-x: scroll;
+    white-space: nowrap;
+    max-width: 40em;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
+}

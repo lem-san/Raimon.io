@@ -3,7 +3,6 @@ import './components/Profile'
 import Nav from './components/Nav'
 import Profile from './components/Profile'
 import Info from './components/Info'
-import Employment from './components/Employment'
 
 function App() {
 
@@ -11,10 +10,8 @@ function App() {
     <>
       <Nav />
       <main className='mainContent'>
-          <Profile />
-          <div>
-            <Info />
-          </div>
+          <Profile className='profileSection'/>
+          <Info className='infoSection'/>
       </main>
     </>
   )

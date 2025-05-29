@@ -2,15 +2,42 @@
     background-color: rgb(253, 247, 239);
 }
 .mainContent {
-    padding-top: 140px;
+    padding-top: 100px;
     display: flex;
     flex-direction: row; 
     line-height: 1.6;
+    justify-content: space-between;
 }
 
-heading {
+/* FIX: What this do? */
+
+header {
     font-family: "Playfair Display", serif;
     font-size: 25px;
     font-weight: 100;
     font-style: normal;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+body.light, .navBar.light {
+  background-color: rgb(253, 247, 239);
+  transition: 0.2s linear;
+}
+
+body.dark, .navBar.dark {
+  background-color: #1a1c20;
+  transition: 0.2s linear;
+}
+
+.heading {
+  margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import logo from '../assets/logo.svg'
 import './Nav.css'
+import '../App.css'
 
 export default function Nav() {
 
@@ -21,22 +22,8 @@ export default function Nav() {
                 style={{ position:'relative', display:'inline-block' }}
             >
                 <img className='logo' src={logo} alt='logo'/>
-                {isHovered && (
-
-                    // MOVE STYLING TO NAV.CSS
-                    
-                    <div style={{
-                        position: 'absolute',
-                        top: '20px',
-                        left: '45px',
-                        background: 'white',
-                        border: '1px solid black',
-                        padding: '10px',
-                        borderRadius: '10px',
-                        boxShadow: '0 0 5px rgba(0,0,0,0.3)',
-                        maxWidth: '600px',
-                        textWrap: 'nowrap'
-                    }}>
+                {isHovered && (                    
+                    <div className='speechBubble'>
                         Hello 👋<br />I'm open for work opportunities!
                     </div> 
                 )}
