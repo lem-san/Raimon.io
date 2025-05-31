@@ -1,7 +1,7 @@
 import './Info.css'
 import '../App.css'
 import Employment from './Employment'
-import Education from './Education'
+import Project from './Project'
 
 export default function Information() {
     return (
@@ -17,7 +17,7 @@ export default function Information() {
                 In my free time, I enjoy
             </p>
             <Employment />
-            <Education />            
+            <Project />            
         </div>
     )
 }
