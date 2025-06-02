@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-family-playfair: Playfair Display, sans-serif;
+  --font-family-source: Source Code Pro, monospace; 
+}
