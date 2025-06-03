@@ -1,5 +1,4 @@
 import project from '../data/project'
-import '../App.css'
 
 export default function Project(){
 
@@ -24,7 +23,7 @@ export default function Project(){
 
     return (
         <div>
-            <h2 className="heading">Projects.</h2>
+            <h2 className="font-family-playfair text-4xl pt-4 pb-6">Projects.</h2>
             {projectEntries}
         </div>
     )

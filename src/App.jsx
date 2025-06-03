@@ -1,8 +1,7 @@
-import './App.css'
 import './index.css'
 import Profile from './components/Profile'
 import Info from './components/Info'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import logo from './assets/logo.svg'
 import { FiSun } from "react-icons/fi";
 import { LuMoonStar } from "react-icons/lu";
@@ -12,7 +11,7 @@ import { LuMoonStar } from "react-icons/lu";
     const [isHovered, setIsHovered] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false);
 
- useEffect(() => {
+    useEffect(() => {
     const handleScroll = () => {
       // You can adjust this value to match your navbar height
       const navbarHeight = 200; // pixels
@@ -26,7 +25,7 @@ import { LuMoonStar } from "react-icons/lu";
 
     // Cleanup function to remove event listener
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    }, []);
 
     function handleMode(newMode) {
       setColorMode(newMode)
@@ -34,7 +33,7 @@ import { LuMoonStar } from "react-icons/lu";
     }
 
     return (
-        <header className={`bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full flex justify-between items-center border-b border-orange-200 shadow-lg shadow-orange-100 px-[30px] py-[20px] 
+        <header className={`z-50 bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full flex justify-between items-center border-b border-orange-200 shadow-lg shadow-orange-100 px-[30px] py-[20px] 
           ${isScrolled ? '' : 'border-transparent shadow-none '} 
         `}>
             <div className='relative inline-block'
@@ -53,7 +52,7 @@ import { LuMoonStar } from "react-icons/lu";
                   ? 'opacity-100 translate-x-0' 
                   : 'opacity-0 translate-y-1 pointer-events-none'
               }`}>
-                <h1 className="heading">Raimon.io</h1>
+                <h1 className="font-family-playfair text-4xl">Raimon.io</h1>
               </div>
             <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
               <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("light")}>
@@ -72,10 +71,15 @@ function App() {
     <>
       <main className="bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear scroll-smooth">
         <Nav />
-        <div className="pt-[100px] flex flex-row justify-between leading-[1.6]">
-            <Profile />
-            <Info />
+        <div className="pt-[150px] flex flex-row">
+          <div className="w-[21%]">
+            <Profile className="w-[80%] fixed pl-[18%]" />
+          </div>
+          <div className="w-[50%] ml-[28%]">
+            <Info className='pr-[25%]'/>
+          </div>
         </div>
+
       </main>
     </>
   )

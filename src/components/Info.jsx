@@ -1,13 +1,11 @@
-import './Info.css'
-import '../App.css'
 import Employment from './Employment'
 import Project from './Project'
 
-export default function Information() {
+export default function Information({className = ''}) {
     return (
-        <div className='information'>
-            <h2 className='heading'>About Me.</h2>
-            <p className="description">
+        <div className={`font-light ${className} font-family-source`}>
+            <h2 className='font-family-playfair text-4xl pt-4 pb-6'>About Me.</h2>
+            <p className="pb-5 leading-7">
                 I'm an aspiring Edtech Developer based in Japan, aiming to ESL English teacher based in Japan with an ICT and software development background. 
                 I'm passionate about interactive classroom tools and language games that boost student engagement and learning. 
                 I’m excited to bring my hands-on experience and tech skills to a role where 

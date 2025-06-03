@@ -1,12 +1,4 @@
-.employmentCard {
-    display: flex;
-    font-size: 14px;
-}
 
-.employmentDates {
-    padding-right: 40px;
-    width: 200px
-}
 
 .skillsContainer > li {
     list-style: none; 
