@@ -33,7 +33,7 @@ import { LuMoonStar } from "react-icons/lu";
     }
 
     return (
-        <header className={`z-50 bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full flex justify-between items-center border-b border-orange-200 shadow-lg shadow-orange-100 px-[30px] py-[20px] 
+        <header className={`z-50 bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full flex justify-between items-center border-b border-orange-200 px-[30px] py-[20px] 
           ${isScrolled ? '' : 'border-transparent shadow-none '} 
         `}>
             <div className='relative inline-block'

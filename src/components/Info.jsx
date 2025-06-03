@@ -5,7 +5,7 @@ export default function Information({className = ''}) {
     return (
         <div className={`font-light ${className} font-family-source`}>
             <h2 className='font-family-playfair text-4xl pt-4 pb-6'>About Me.</h2>
-            <p className="pb-5 leading-7">
+            <p className="pb-5 leading-6 text-sm">
                 I'm an aspiring Edtech Developer based in Japan, aiming to ESL English teacher based in Japan with an ICT and software development background. 
                 I'm passionate about interactive classroom tools and language games that boost student engagement and learning. 
                 I’m excited to bring my hands-on experience and tech skills to a role where 

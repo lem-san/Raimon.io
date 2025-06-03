@@ -28,3 +28,55 @@ ul {
 ul::-webkit-scrollbar {
     display: none;
 }
+
+/* Employment.css */
+
+.shimmer-wrapper {
+  position: relative;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(
+    130deg,
+    #facc15,
+    #f472b6,
+    #3b82f6,
+    #10b981,
+    #facc15
+  );
+  background-size: 200% 200%;
+  transition: opacity 0.5s ease;
+}
+
+.shimmer-inner {
+  border-radius: 10px;
+  background-color: white;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.shimmer-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: inherit;
+  background-size: 200% 200%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.shimmer-wrapper:hover::before {
+  animation: shimmer 2s linear infinite;
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
