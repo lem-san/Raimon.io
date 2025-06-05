@@ -6,3 +6,8 @@
   --font-family-playfair: Playfair Display, sans-serif;
   --font-family-source: Source Code Pro, monospace; 
 }
+
+::selection {
+	background: #222;
+  color: oklch(98% 0.016 73.684);
+}

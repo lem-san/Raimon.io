@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 
 export default function Profile({ className = '' }) {
     return (
-        <div className={`text-stone-950/70 ${className}`}>
+        <div className={`text-stone-950/80 ${className}`}>
             <h1 className="font-family-playfair text-5xl py-[1rem]">Raimon Barragans</h1>
             <h2 className="font-family-playfair text-2xl py-[1rem] italic">Edtech Developer,<br />Assistant Language Instructor</h2>
             <div className="flex pb-5 pt-2 items-center">

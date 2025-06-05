@@ -82,13 +82,13 @@ export default function Employment() {
                 </h3>
                 <p className="leading-5 pb-2 tracking-tight">{entry.desc}</p>
                   {isHovered === index && (
-                    <div className="">
-                    <ul className="">
+                    <div>
+                    <ul>
                       {entry.softSkills.map((skill, i) => (
                         <li key={i} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
                       ))}
                     </ul>
-                    <ul className="">
+                    <ul>
                       {entry.technicalSkills.map((skill, i) => (
                         <li key={i} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
                       ))}
