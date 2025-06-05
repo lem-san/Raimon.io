@@ -5,6 +5,7 @@ import clsx from 'clsx'
 export default function Employment() {
   const numEntries = employment.length
   const [visible, setVisible] = useState(Array(numEntries).fill(false))
+  const [isHovered, setIsHovered] = useState(null)
   const entryRefs = useRef([])
 
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function Employment() {
 
   return (
     <div>
-      <h2 className="font-family-playfair text-4xl pt-4 pb-4">Employment.</h2>
+      <h2 className="font-family-playfair text-4xl pt-4">Employment.</h2>
       {employment.map((entry, index) => {
         const isVisible = visible[index]
 
@@ -59,37 +60,41 @@ export default function Employment() {
             ref={el => (entryRefs.current[index] = el)}
             onMouseMove={handleMouseMove}
             className={clsx(
-              'relative rounded-xl bg-white/5 backdrop-blur group transition-all duration-[1600ms] ease-out overflow-hidden hover:bg-orange-700',
+              'relative my-4 rounded-xl backdrop-blur group duration-[1000ms] ease-out overflow-hidden hover:shadow-xl',
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             )}
+                onMouseEnter={() => setIsHovered(index)}
+                onMouseLeave={() => setIsHovered(null)}
           >
             {/* Spotlight gradient layer */}
             <div
-              className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100 hover:bg-orange-700"
+              className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100 "
               style={{
-                background: `radial-gradient(400px circle at ${mouse.x}px ${mouse.y}px, rgba(224, 206, 160, 0.8), transparent 80%)`,
+                background: `radial-gradient(400px circle at ${mouse.x}px ${mouse.y}px, white, transparent 80%)`,
               }}
             />
 
-            <div className="relative z-10 flex py-4 px-6 transition-transform duration-300 transform group-hover:scale-[1.01]">
-              <p className="text-sm font-bold pr-8 pt-3.5 whitespace-nowrap min-w-[90px]">{entry.dates}</p>
+            <div className="relative z-10 flex p-6 transition-transform duration-300 transform group-hover:scale-[1.01] hover:bg-orange-500/20 hover:border-t-2 hover:border-orange-200/40">
+              <p className="text-sm font-bold pt-1 whitespace-nowrap min-w-[11em]">{entry.dates}</p>
               <div className="text-sm">
-                <h3 className="text-lg font-bold py-2">
+                <h3 className="text-lg font-bold pb-2">
                   {entry.title}・<a className="underline" href={entry.link}>{entry.company}</a>
                 </h3>
                 <p className="leading-5 pb-2 tracking-tight">{entry.desc}</p>
-                <div className="skillsSliderWrapper">
-                  <ul className="skillsContainer">
-                    {entry.softSkills.map((skill, i) => (
-                      <li key={i} className="skills" id="softSkills">{skill}</li>
-                    ))}
-                  </ul>
-                  <ul className="skillsContainer">
-                    {entry.technicalSkills.map((skill, i) => (
-                      <li key={i} className="skills" id="technicalSkills">{skill}</li>
-                    ))}
-                  </ul>
-                </div>
+                  {isHovered === index && (
+                    <div className="">
+                    <ul className="">
+                      {entry.softSkills.map((skill, i) => (
+                        <li key={i} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
+                      ))}
+                    </ul>
+                    <ul className="">
+                      {entry.technicalSkills.map((skill, i) => (
+                        <li key={i} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
+                      ))}
+                    </ul>
+                    </div>
+                  )}
               </div>
             </div>
           </div>

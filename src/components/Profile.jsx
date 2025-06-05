@@ -19,15 +19,15 @@ export default function Profile({ className = '' }) {
                 Hey, I'm Raimon. I'm an aspiring developer based in Japan. I build educational solutions that help my students engage and communicate in English.
             </p>
             <div>
-                <ul className="pt-[15px] pl-0 mt-[5px] flex list-none">
-                    <IconContext.Provider value={{color: '#222', size:'2rem'}}>
-                    <li className="px-[10px]">
+                <ul className="pt-[10px] pl-0 ml-0 flex list-none group-hover:scale-[1.01]">
+                    <IconContext.Provider value={{size:'1.5rem'}}>
+                    <li className="pr-[10px] hover:scale-[1.3] transition-all hover:text-orange-300/90">
                         <a href="https://github.com/lem-san"><PiGithubLogoLight className="w-8"/></a>
                     </li>
-                    <li className="px-[10px]">
+                    <li className="px-[10px] hover:scale-[1.3] transition-all hover:text-orange-300/90">
                         <a href="https://www.linkedin.com/in/raimon-barragans/"><FaLinkedin className="w-8"/></a>
                     </li>
-                    <li className="px-[10px]">
+                    <li className="px-[10px] hover:scale-[1.3] transition-all hover:text-orange-300/90">
                         <a href="mailto:raimon.barragans@gmail.com"><CiMail className="w-8"/></a>
                     </li>
                     </IconContext.Provider>
