@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import employment from '../data/employment'
 import clsx from 'clsx'
+import TruncateText from './truncateText'
 
 export default function Employment() {
   const numEntries = employment.length
@@ -60,7 +61,7 @@ export default function Employment() {
             ref={el => (entryRefs.current[index] = el)}
             onMouseMove={handleMouseMove}
             className={clsx(
-              'relative my-4 rounded-xl backdrop-blur group duration-[1000ms] ease-out overflow-hidden hover:shadow-xl',
+              'relative my-4 rounded-xl backdrop-blur group duration-[500ms] ease-out overflow-hidden hover:shadow-xl',
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             )}
                 onMouseEnter={() => setIsHovered(index)}
@@ -74,27 +75,25 @@ export default function Employment() {
               }}
             />
 
-            <div className="relative z-10 flex p-6 transition-transform duration-300 transform group-hover:scale-[1.01] hover:bg-orange-500/20 hover:border-t-2 hover:border-orange-200/40">
-              <p className="text-sm font-bold pt-1 whitespace-nowrap min-w-[11em]">{entry.dates}</p>
+            <div className="relative z-10 flex p-6 transition-transform hover:bg-orange-500/20">
+              <p className="text-sm font-family-source font-medium tracking-tight pt-1 whitespace-nowrap min-w-[10em]">{entry.dates}</p>
               <div className="text-sm">
-                <h3 className="text-lg font-bold pb-2">
-                  {entry.title}・<a className="underline" href={entry.link}>{entry.company}</a>
+                <h3 className="text-lg font-family-source font-medium pb-3 tracking-tight">
+                  {entry.title}・<a className="font-bold" href={entry.link}>{entry.company}</a>
                 </h3>
-                <p className="leading-5 pb-2 tracking-tight">{entry.desc}</p>
-                  {isHovered === index && (
-                    <div>
-                    <ul>
-                      {entry.softSkills.map((skill, i) => (
-                        <li key={i} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
-                      ))}
-                    </ul>
-                    <ul>
-                      {entry.technicalSkills.map((skill, i) => (
-                        <li key={i} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
-                      ))}
-                    </ul>
-                    </div>
-                  )}
+                <TruncateText text={entry.desc} charLimit={200} />
+                <div className='pt-2'>
+                  <ul>
+                    {entry.softSkills.map((skill, i) => (
+                      <li key={i} className='font-family-source list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
+                    ))}
+                  </ul>
+                  <ul>
+                    {entry.technicalSkills.map((skill, i) => (
+                      <li key={i} className='font-family-source list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
+                    ))}
+                  </ul>
+                </div>  
               </div>
             </div>
           </div>

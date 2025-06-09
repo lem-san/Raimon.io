@@ -5,6 +5,7 @@
 @theme {
   --font-family-playfair: Playfair Display, sans-serif;
   --font-family-source: Source Code Pro, monospace; 
+  --font-family-ibx: IBM Plex Sans, sans-serif;
 }
 
 ::selection {

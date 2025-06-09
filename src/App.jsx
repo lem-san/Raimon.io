@@ -71,7 +71,7 @@ function App() {
     <>
       <main className="bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear scroll-smooth">
         <Nav />
-        <div className="pt-[150px] flex flex-row">
+        <div className="pt-[150px] flex flex-row pb-10">
           <div className="w-[21%]">
             <Profile className="w-[80%] fixed pl-[18%]" />
           </div>

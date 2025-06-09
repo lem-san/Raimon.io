@@ -4,7 +4,7 @@ export default [
         title: "ALT English Instructor",
         company: "AtoZ",
         link: "https://atoz-ed.com/",
-        desc: "Led engaging English classes across all elementary school levels, serving as the primary instructor and planner in collaboration with Japanese homeroom teachers. Designed and delivered dynamic, student-centered lessons tailored to varying language levels and learning styles, promoting confidence and positive communication in English. Developed original teaching materials and a flexible curriculum that supports student growth through scaffolded activities, active learning, and real-world language use. Introduced structured goal-setting systems and reflection-based activities that encouraged students to take ownership of their learning and celebrate progress. Coordinated cross-school English events and collaborative projects, connecting students within our local community. Created interactive web applications and digital games using my background in software development, enhancing classroom engagement and independent learning opportunities. Built custom digital tools for vocabulary review, letter recognition and spelling, speaking exercises, and student feedback; thus increased student motivation and promoted student ICT literacy. Actively collaborated with other educators to share best practices, co-develop teaching resources, and explore innovative approaches to language education through technology.",
+        desc: "Facilitate ESL English classes as the primary planner and instructor in collaboration with Japanese homeroom teachers. Design and deliver dynamic, student-centered lessons tailored to varying language levels and learning styles. Develop original teaching materials and a flexible curriculum that supports student growth through scaffolded activities, active learning, and real-world language use. Create interactive web apps and digital games to enhance classroom engagement and independent learning opportunities. Build custom digital tools for vocabulary review, letter recognition and spelling, and speaking exercises. Coordinate cross-school collaborative projects that connect students within our local community.",
         dates: "2021 - Present",
         softSkills: ["Curriculum Development", "Student Assessment", "ICT Literacy Development", "Game Creation"],
         technicalSkills: ["HTML & CSS", "Javascript", "React", "Google Cloud Services"] 
@@ -22,7 +22,7 @@ export default [
     {
         id: 3,
         title: "IT Support Technician",
-        company: "National Transport Commission",
+        company: "NTC",
         link: "https://www.ntc.gov.au/",
         desc: "IT Tech Support: Database management & recordkeeping of integrated EDRMS. Troubleshooting user issues, software & hardware failure. System administration & user profile management. Content migration and structuring of new CMS. Trained staff on appropriate usage, workflows, and general site management. Part of the team responsible for migrating 20+ years of legacy data into a new EDRMS and a subsequent new website for public viewing. Additionally, General Administration & Reception responsibilities.",
         dates: "2013 - 2015",
