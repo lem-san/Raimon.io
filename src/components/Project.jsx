@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import project from '../data/project'
 import clsx from 'clsx'
-import TruncateText from './truncateText'
+import TruncateText from './TruncateText'
 import { IconContext } from "react-icons";
 import { FaLink } from "react-icons/fa";
 import { MdOutlineZoomIn } from "react-icons/md";

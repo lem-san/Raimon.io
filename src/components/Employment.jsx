@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import employment from '../data/employment'
 import clsx from 'clsx'
-import TruncateText from './truncateText'
+import TruncateText from './TruncateText'
 
 export default function Employment() {
   const numEntries = employment.length
