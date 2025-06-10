@@ -5,7 +5,8 @@ import TruncateText from './truncateText'
 import { IconContext } from "react-icons";
 import { FaLink } from "react-icons/fa";
 import { MdOutlineZoomIn } from "react-icons/md";
-
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 export default function Project(){
 
     const numEntries = project.length
@@ -41,12 +42,6 @@ export default function Project(){
         }
       }, [visible])
 
-    //   function handleZoom() {
-    //     return (
-
-    //     )
-    //   }
-
     const projectEntries = project.map((entry, index) => {
         const isVisible = visible[index]
         return (
@@ -60,7 +55,15 @@ export default function Project(){
                 onMouseEnter={() => setIsHovered(index)}
                 onMouseLeave={() => setIsHovered(null)}
             >
-                <img src={entry.thumbnail} alt={entry.title} className='w-50 border-zinc-900/10 border-4 hover:border-orange-300/90 hover:duration-[500ms] hover:cursor-pointer hover:brightness-80 rounded-lg h-[100%]'/>
+                <div className="w-[200px] h-[113px] flex-shrink-0 overflow-hidden rounded-lg border-4 border-zinc-900/10 hover:border-orange-300/90 duration-500 hover:brightness-80">
+                <Zoom zoomMargin={100}>
+                    <img 
+                    src={entry.thumbnail} 
+                    alt={entry.title}
+                    className="w-full h-full object-cover cursor-pointer" 
+                    />
+                </Zoom>
+                </div>
                 <div className='pl-6 text-sm inline'>
                     <h3 className="text-lg font-family-source font-medium pb-3 tracking-tight flex items-center">{entry.title}
                         <IconContext.Provider value={{size:'1rem'}}>
@@ -80,7 +83,7 @@ export default function Project(){
 
     return (
         <div>
-            <h2 className="font-family-playfair text-4xl pt-4 pb-6">Projects.</h2>
+            <h2 className="font-family-playfair text-4xl pt-4">Projects.</h2>
             {projectEntries}
         </div>
     )

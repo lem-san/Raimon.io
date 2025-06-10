@@ -12,3 +12,16 @@
 	background: #222;
   color: oklch(98% 0.016 73.684);
 }
+
+[data-rmiz-btn-unzoom] {
+  display: none;
+}
+
+[data-rmiz-modal-overlay] {
+  opacity: 0.8;
+}
+
+[data-rmiz-modal-img] {
+  border: solid 0.3rem rgb(239, 192, 126);
+  border-radius: 1.5rem;
+}
