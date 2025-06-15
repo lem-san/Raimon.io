@@ -11,6 +11,16 @@ export default [
     },
     {
         id: 2,
+        title: "Remote ESL Instructor",
+        company: "Metaverse",
+        link: "https://metaverse.skytalk.co.jp/",
+        desc: "Conduct ESL English .. ",
+        dates: "2025 - Present",
+        softSkills: ["Remote Learning", "Curriculum Development", "ICT Literacy Development"],
+        technicalSkills: [] 
+    },
+    {
+        id: 3,
         title: "Event Coordinator",
         company: "Synergy Events Group",
         link: "https://www.synergyeventsgroup.com.au/",
@@ -20,7 +30,7 @@ export default [
         technicalSkills: []
     },
     {
-        id: 3,
+        id: 4,
         title: "IT Support Technician",
         company: "NTC",
         link: "https://www.ntc.gov.au/",
