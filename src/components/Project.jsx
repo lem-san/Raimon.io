@@ -7,6 +7,7 @@ import { FaLink } from "react-icons/fa";
 import { MdOutlineZoomIn } from "react-icons/md";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+
 export default function Project(){
 
     const numEntries = project.length
@@ -64,7 +65,7 @@ export default function Project(){
                     />
                 </Zoom>
                 </div>
-                <div className='pl-6 text-sm inline'>
+                <div className='pl-6 text-xs inline'>
                     <h3 className="text-lg font-family-source font-medium pb-3 tracking-tight flex items-center">{entry.title}
                         <IconContext.Provider value={{size:'1rem'}}>
                             <a href={entry.link} alt={entry.title} className='inline pl-2'><FaLink /></a>

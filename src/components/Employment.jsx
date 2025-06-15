@@ -77,7 +77,7 @@ export default function Employment() {
 
             <div className="relative z-10 flex p-6 transition-transform hover:bg-orange-500/20">
               <p className="text-sm font-family-source font-medium tracking-tight pt-1 whitespace-nowrap min-w-[10em]">{entry.dates}</p>
-              <div className="text-sm">
+              <div className="text-xs">
                 <h3 className="text-lg font-family-source font-medium pb-3 tracking-tight">
                   {entry.title}・<a className="font-bold" href={entry.link}>{entry.company}</a>
                 </h3>

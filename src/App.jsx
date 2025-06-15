@@ -52,7 +52,7 @@ import { LuMoonStar } from "react-icons/lu";
                   ? 'opacity-100 translate-x-0' 
                   : 'opacity-0 translate-y-1 pointer-events-none'
               }`}>
-                <h1 className="font-family-playfair text-4xl">Raimon.io</h1>
+                <h1 className="font-family-playfair text-4xl text-stone-950/80">Raimon.io</h1>
               </div>
             <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
               <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("light")}>

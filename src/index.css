@@ -8,6 +8,10 @@
   --font-family-ibx: IBM Plex Sans, sans-serif;
 }
 
+.custom-cursor:hover {
+  cursor: url('/assets/steve-cursor.cur'), auto;
+}
+
 ::selection {
 	background: #222;
   color: oklch(98% 0.016 73.684);

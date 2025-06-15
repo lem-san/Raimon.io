@@ -3,12 +3,27 @@ import { PiGithubLogoLight } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { IconContext } from "react-icons";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Profile({ className = '' }) {
     return (
         <div className={`text-stone-950/80 ${className}`}>
             <h1 className="font-family-playfair text-5xl py-[1rem]">Raimon Barragans</h1>
-            <h2 className="font-family-source text-3xl py-[0.5rem] leading-10 tracking-tight">Edtech Developer,<br />ESL English Teacher</h2>
+            <TypeAnimation
+                sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    'Event Coordinator',
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    'ALT English Teacher',
+                    1000,
+                    'EdTech Developer,\nESL English Instructor',
+                    1000,
+                ]}
+                wrapper="h3"
+                speed={60}
+                style={{whiteSpace: 'pre-line'}}
+                className="font-family-source text-3xl py-[0.5rem] leading-10 tracking-tight"
+            />
             <h3 className="w-105 font-family-ibx font-light text-sm leading-7 py-2">
                 Hey, I'm Raimon.👋 <br /> I'm an aspiring developer based in Japan. I build educational tools that help my students engage and communicate in English.
             </h3>
