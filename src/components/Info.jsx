@@ -1,5 +1,6 @@
 import Employment from './Employment'
 import Project from './Project'
+import Certification from './Certification'
 
 export default function Information({className = ''}) {
         
@@ -18,13 +19,13 @@ export default function Information({className = ''}) {
             </p>
             <Employment />
             <Project /> 
-
+            <Certification />
             <p className='text-xs pt-15 leading-5'>
-                Coded in <a href='https://code.visualstudio.com/' className='font-bold'>Visual Studio Code</a> by myself. Built in <a href='https://vite.dev/' className='font-bold'>Vite</a> and <a href='https://tailwindcss.com/' className='font-bold'>Tailwind CSS</a>, deployed with <a href='https://www.netlify.com/' className='font-bold'>Netlify</a>.
+                Coded in <a href='https://code.visualstudio.com/' className='font-bold'>Visual Studio Code</a>. Built in <a href='https://vite.dev/' className='font-bold'>Vite</a> and <a href='https://tailwindcss.com/' className='font-bold'>Tailwind CSS</a>, deployed with <a href='https://www.netlify.com/' className='font-bold'>Netlify</a>.
                 <br />
                 Icons sourced from <a href='https://react-icons.github.io/react-icons/' className='font-bold'>React Icons</a> and 
                     <span className="font-bold custom-cursor transition-all duration-400 hover:text-orange-300/90"> Le Poisson Steve </span>
-                made by the talented <a href='https://www.instagram.com/vigzvigz/' className='font-bold'>Vigz</a>.
+                illustrated by the talented <a href='https://www.instagram.com/vigzvigz/' className='font-bold'>Vigz</a>.
             </p>           
         </div>
     )
