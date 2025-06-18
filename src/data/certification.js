@@ -36,7 +36,7 @@ export default [
         association: "The TEFL Org",
         thumbnail: tefl,
         link: "https://www.tefl.org/",
-        progress: 20,
+        progress: 60,
         compDate: ""
     }
 ]

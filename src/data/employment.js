@@ -14,7 +14,7 @@ export default [
         title: "Remote ESL Instructor",
         company: "Metaverse",
         link: "https://metaverse.skytalk.co.jp/",
-        desc: "Conduct ESL English .. ",
+        desc: "Conduct remote English learning lessons in the context of the students' favorite games. Play with the students during joint game sessions, using English to communicate to accomplish in-game activities and goals. Develop personalised curriculum and materials to match their learning pace and their interests. Track student learning  progress and their ICT literacy.",
         dates: "2025 - Present",
         softSkills: ["Remote Learning", "Curriculum Development", "ICT Literacy Development"],
         technicalSkills: [] 
