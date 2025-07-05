@@ -4,8 +4,12 @@ import { FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { IconContext } from "react-icons";
 import { TypeAnimation } from 'react-type-animation';
+import useActiveInfoSection from "./useActiveInfoSection";
+import SideBar from "./SideBar";
 
 export default function Profile({ className = '' }) {
+      const sectionIds = ['employment', 'project', 'certification'];
+      const activeSection = useActiveInfoSection(sectionIds);
     return (
         <div className={`text-stone-950/80 ${className}`}>
             <h1 className="font-family-playfair text-5xl py-[1rem]">Raimon Barragans</h1>
@@ -48,6 +52,7 @@ export default function Profile({ className = '' }) {
                     </IconContext.Provider>
                 </ul>
             </div>
+            <SideBar active={activeSection}/>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import certification from "../data/certification"
 import { useState, useEffect, useRef } from "react"
 import clsx from "clsx"
 
-export default function Certification () {
+export default function Certification ( {id} ) {
 
     const numEntries = certification.length
     const [visible, setVisible] = useState(Array(numEntries).fill(false))
@@ -49,6 +49,7 @@ export default function Certification () {
                 )}
                 onMouseEnter={() => setIsHovered(index)}
                 onMouseLeave={() => setIsHovered(null)}
+                id={id}
             >
                     <img 
                     src={entry.thumbnail} 

@@ -3,7 +3,7 @@ import Project from './Project'
 import Certification from './Certification'
 
 export default function Information({className = ''}) {
-        
+
     return (
         <div className={`font-light font-family-ibx text-stone-950/80 ${className}`}>
             <h2 className='font-family-playfair text-4xl pt-4 pb-8'>About Me.</h2>
@@ -17,9 +17,9 @@ export default function Information({className = ''}) {
             <br />
             In my free time, I enjoy travelling around Japan. I love finding new places to see and delicious foods to eat. For when I'm stuck at home, you can find me playing video games, trying to learn to cook, and tinkering with some new tech.
             </p>
-            <Employment />
-            <Project /> 
-            <Certification />
+            <Employment id="employment"/>
+            <Project id="project"/> 
+            <Certification id="certification"/>
             <p className='text-xs pt-15 leading-5'>
                 Coded in <a href='https://code.visualstudio.com/' className='font-bold'>Visual Studio Code</a>. Built in <a href='https://vite.dev/' className='font-bold'>Vite</a> and <a href='https://tailwindcss.com/' className='font-bold'>Tailwind CSS</a>, deployed with <a href='https://www.netlify.com/' className='font-bold'>Netlify</a>.
                 <br />

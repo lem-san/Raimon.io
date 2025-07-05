@@ -3,7 +3,7 @@ import employment from '../data/employment'
 import clsx from 'clsx'
 import TruncateText from './TruncateText'
 
-export default function Employment() {
+export default function Employment( {id} ) {
   const numEntries = employment.length
   const [visible, setVisible] = useState(Array(numEntries).fill(false))
   const [isHovered, setIsHovered] = useState(null)
@@ -49,7 +49,7 @@ export default function Employment() {
   }
 
   return (
-    <div>
+    <div id={id}>
       <h2 className="font-family-playfair text-4xl pt-4">Employment.</h2>
       {employment.map((entry, index) => {
         const isVisible = visible[index]

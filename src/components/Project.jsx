@@ -8,7 +8,7 @@ import { MdOutlineZoomIn } from "react-icons/md";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-export default function Project(){
+export default function Project( {id} ){
 
     const numEntries = project.length
     const [isHovered, setIsHovered] = useState(false)
@@ -55,6 +55,7 @@ export default function Project(){
                 )}
                 onMouseEnter={() => setIsHovered(index)}
                 onMouseLeave={() => setIsHovered(null)}
+                id={id}
             >
                 <div className="w-[200px] h-[113px] flex-shrink-0 overflow-hidden rounded-lg border-4 border-zinc-900/10 hover:border-orange-300/90 duration-500 hover:brightness-80">
                 <Zoom zoomMargin={100}>
