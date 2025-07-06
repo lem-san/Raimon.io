@@ -8,6 +8,9 @@
   --font-family-ibx: IBM Plex Sans, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .custom-cursor:hover {
   cursor: url('/assets/steve-cursor.cur'), auto;
 }

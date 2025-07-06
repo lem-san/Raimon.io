@@ -11,14 +11,14 @@ export default function Profile({ className = '' }) {
       const sectionIds = ['employment', 'project', 'certification'];
       const activeSection = useActiveInfoSection(sectionIds);
     return (
-        <div className={`text-stone-950/80 ${className}`}>
+        <div className={`text-stone-950/80 max-w-[50%] ${className}`}>
             <h1 className="font-family-playfair text-5xl py-[1rem]">Raimon Barragans</h1>
             <TypeAnimation
                 sequence={[
                     // Same substring at the start will only be typed out once, initially
-                    'Event Coordinator',
+                    '\nEvent Coordinator',
                     1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    'ALT English Teacher',
+                    '\nALT English Teacher',
                     1000,
                     'EdTech Developer,\nESL English Instructor',
                     1000,
@@ -26,7 +26,7 @@ export default function Profile({ className = '' }) {
                 wrapper="h3"
                 speed={60}
                 style={{whiteSpace: 'pre-line'}}
-                className="font-family-source text-3xl py-[0.5rem] leading-10 tracking-tight"
+                className="font-family-source text-3xl py-[0.5rem] leading-10 tracking-tight h-full"
             />
             <h3 className="w-105 font-family-ibx font-light text-sm leading-7 py-2">
                 Hey, I'm Raimon.👋 <br /> I'm an aspiring developer based in Japan. I build educational tools that help my students engage and communicate in English.
