@@ -47,13 +47,30 @@ import { useTranslation } from 'react-i18next';
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <img className="w-[50px] transition-transform duration-100 ease-in hover:scale-150" src={logo} alt='logo'/>
-                {isHovered && (                    
-                    <div className="absolute top-[1em] left-[4.5rem] bg-white border border-black p-[1rem] rounded-[1rem] max-w-[20rem] whitespace-nowrap">
-                        Hello 👋<br />{t('bonusMessage')}
-                    </div> 
-                )}
-            </div>
+              {/* INDICATOR */}
+              <span className="absolute top-1 right-0 -translate-y-1/2 translate-x-1/2 z-10 flex size-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+              </span>
+
+              {/* IMAGE */}
+              <img
+                className="w-[50px] transition-transform duration-100 ease-in hover:scale-150"
+                src={logo}
+                alt="logo"
+              />
+
+              {/* TOOLTIP */}
+              {isHovered && (
+                <div>
+                  <div className='bg-[#fff] border-1 border-[#222] rounded-4xl absolute px-4 py-1.5'>update</div>
+                  <div className="absolute top-[1em] left-[4.5rem] bg-[#222] text-[#fff] border p-[1rem] rounded-[1rem] max-w-[20rem] whitespace-nowrap font-family-ibx">
+                    Hello 👋<br />
+                    {t('bonusMessage')}
+                  </div>
+                </div>
+              )}
+          </div>
               <div className={`transition-all duration-300 ${
                 isScrolled 
                   ? 'opacity-100 translate-x-0' 
