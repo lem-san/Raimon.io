@@ -8,8 +8,9 @@ import { LuMoonStar } from "react-icons/lu";
 
   function Nav() {
     const [colorMode, setColorMode] = useState("light")
+    const [langauge, setLanguage] = useState("english")
     const [isHovered, setIsHovered] = useState(false)
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false)
 
     useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,11 @@ import { LuMoonStar } from "react-icons/lu";
     function handleMode(newMode) {
       setColorMode(newMode)
       document.documentElement.classList.toggle("dark", newMode === "dark")
+    }
+
+    function handleLanguage(newLanguage) {
+      setLanguage(newLanguage)
+      document.documentElement.classList.toggle("japanese", newMode === "japanese")
     }
 
     return (
@@ -54,6 +60,15 @@ import { LuMoonStar } from "react-icons/lu";
               }`}>
                 <h1 className="font-family-playfair text-4xl text-stone-950/80">Raimon.io</h1>
               </div>
+              <div className='flex gap-2'>
+            <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
+              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleLanguage("english")}>
+                EN
+              </button>
+              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleLanguage("japanese")}>
+                JP
+              </button>
+            </div>
             <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
               <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("light")}>
                 <FiSun />
@@ -62,6 +77,8 @@ import { LuMoonStar } from "react-icons/lu";
                 <LuMoonStar />
               </button>
             </div>
+
+              </div>
         </header>           
     )
 }
