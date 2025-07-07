@@ -2,6 +2,7 @@ import certification from "../data/certification"
 import { useState, useEffect, useRef } from "react"
 import clsx from "clsx"
 import TruncateText from "./TruncateText"
+import { useTranslation } from "react-i18next"
 
 export default function Certification ( {id, className=''} ) {
 
@@ -9,6 +10,8 @@ export default function Certification ( {id, className=''} ) {
     const [visible, setVisible] = useState(Array(numEntries).fill(false))
     const entryRefs = useRef([])
     const [isHovered, setIsHovered] = useState(null)
+    const { i18n } = useTranslation()
+    const certData = certification[i18n.language] || certification['en']
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -38,7 +41,7 @@ export default function Certification ( {id, className=''} ) {
         }
         }, [visible])
 
-    const certificationEntries = certification.map((entry, index) => {
+    const certificationEntries = certData.map((entry, index) => {
         const isVisible = visible[index]
         return (
             <div

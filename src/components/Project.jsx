@@ -7,6 +7,7 @@ import { FaLink } from "react-icons/fa";
 import { MdOutlineZoomIn } from "react-icons/md";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import { useTranslation } from 'react-i18next';
 
 export default function Project({ id, className = '' }) {
 
@@ -14,6 +15,8 @@ export default function Project({ id, className = '' }) {
     const [isHovered, setIsHovered] = useState(false)
     const [visible, setVisible] = useState(Array(numEntries).fill(false))
     const entryRefs = useRef([])
+    const { i18n } = useTranslation()
+    const projData = project[i18n.language] || project['en']
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -43,7 +46,7 @@ export default function Project({ id, className = '' }) {
         }
       }, [visible])
 
-    const projectEntries = project.map((entry, index) => {
+    const projectEntries = projData.map((entry, index) => {
         const isVisible = visible[index]
         return (
             <div 

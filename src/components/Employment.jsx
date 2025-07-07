@@ -2,12 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import employment from '../data/employment'
 import clsx from 'clsx'
 import TruncateText from './TruncateText'
+import { useTranslation } from "react-i18next"
 
 export default function Employment( {id, className=''} ) {
   const numEntries = employment.length
   const [visible, setVisible] = useState(Array(numEntries).fill(false))
   const [isHovered, setIsHovered] = useState(null)
   const entryRefs = useRef([])
+  const { i18n } = useTranslation()
+  const employData = employment[i18n.language] || employment['en']
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,7 +54,7 @@ export default function Employment( {id, className=''} ) {
   return (
     <div id={id} className={clsx(className)}>
       <h2 className="font-family-playfair text-4xl pt-4">Employment.</h2>
-      {employment.map((entry, index) => {
+      {employData.map((entry, index) => {
         const isVisible = visible[index]
 
         return (

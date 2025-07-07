@@ -5,12 +5,18 @@ import { useState, useEffect, useRef } from 'react'
 import logo from './assets/logo.svg'
 import { FiSun } from "react-icons/fi";
 import { LuMoonStar } from "react-icons/lu";
+import '../i18n';
+
+import { useTranslation } from 'react-i18next';
 
   function Nav() {
     const [colorMode, setColorMode] = useState("light")
-    const [langauge, setLanguage] = useState("english")
     const [isHovered, setIsHovered] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
+
+    const { t, i18n } = useTranslation();
+    const switchToEnglish = () => i18n.changeLanguage('en');
+    const switchToJapanese = () => i18n.changeLanguage('jp');
 
     useEffect(() => {
     const handleScroll = () => {
@@ -33,11 +39,6 @@ import { LuMoonStar } from "react-icons/lu";
       document.documentElement.classList.toggle("dark", newMode === "dark")
     }
 
-    function handleLanguage(newLanguage) {
-      setLanguage(newLanguage)
-      document.documentElement.classList.toggle("japanese", newMode === "japanese")
-    }
-
     return (
         <header className={`z-50 bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full flex justify-between items-center border-b-2 border-orange-200 px-[30px] py-[20px] 
           ${isScrolled ? '' : 'border-transparent shadow-none '} 
@@ -49,7 +50,7 @@ import { LuMoonStar } from "react-icons/lu";
                 <img className="w-[50px] transition-transform duration-100 ease-in hover:scale-150" src={logo} alt='logo'/>
                 {isHovered && (                    
                     <div className="absolute top-[1em] left-[4.5rem] bg-white border border-black p-[1rem] rounded-[1rem] max-w-[20rem] whitespace-nowrap">
-                        Hello 👋<br />I'm open for work opportunities!
+                        Hello 👋<br />{t('bonusMessage')}
                     </div> 
                 )}
             </div>
@@ -61,11 +62,11 @@ import { LuMoonStar } from "react-icons/lu";
                 <h1 className="font-family-playfair text-4xl text-stone-950/80">Raimon.io</h1>
               </div>
               <div className='flex gap-2'>
-            <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
-              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleLanguage("english")}>
+            <div className='bg-orange-100 dark:bg-zinc-700 p-2 font-family-ibx rounded-2xl'>
+              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToEnglish}>
                 EN
               </button>
-              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleLanguage("japanese")}>
+              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToJapanese}>
                 JP
               </button>
             </div>
