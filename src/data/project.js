@@ -20,7 +20,7 @@ const project = {
       technicalSkills: ["HTML & CSS", "React", "Google Cloud Services"]
     }
   ],
-  jp: [
+  ja: [
     {
       id: 1,
       title: "Raimon.io（v1）",

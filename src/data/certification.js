@@ -45,7 +45,7 @@ const certification = {
             compDate: ""
         }
     ], 
-    jp: [
+    ja: [
         {
             id: 1,
             accreditation: "ICT学士（ソフトウェア）",

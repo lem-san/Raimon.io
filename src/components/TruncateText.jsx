@@ -1,9 +1,11 @@
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function TruncateText({ text, charLimit = 100 }) {
   const [expanded, setExpanded] = useState(false)
   const shouldTruncate = text.length > charLimit
   const visibleText = expanded || !shouldTruncate ? text : text.slice(0, charLimit)
+  const { t, i18n } = useTranslation()
 
   return (
     <p className="leading-6 inline">
@@ -13,7 +15,7 @@ export default function TruncateText({ text, charLimit = 100 }) {
           onClick={() => setExpanded(true)}
           className="font-bold text-xs cursor-pointer inline"
         >
-          {' '}.. Read more
+          {' '}{t("readMore")}
         </span>
       )}
     </p>

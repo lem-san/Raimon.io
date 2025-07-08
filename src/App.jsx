@@ -16,7 +16,7 @@ import { useTranslation } from 'react-i18next';
 
     const { t, i18n } = useTranslation();
     const switchToEnglish = () => i18n.changeLanguage('en');
-    const switchToJapanese = () => i18n.changeLanguage('jp');
+    const switchToJapanese = () => i18n.changeLanguage('ja');
 
     useEffect(() => {
     const handleScroll = () => {
@@ -40,17 +40,17 @@ import { useTranslation } from 'react-i18next';
     }
 
     return (
-        <header className={`z-50 bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full flex justify-between items-center border-b-2 border-orange-200 px-[30px] py-[20px] 
+        <header className={`z-50 bg-orange-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full grid grid-cols-3 items-center border-b-2 border-orange-200 px-[30px] py-[20px] 
           ${isScrolled ? '' : 'border-transparent shadow-none '} 
         `}>
-            <div className='relative inline-block'
+            <div className='relative justify-self-start'
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
               {/* INDICATOR */}
-              <span className="absolute top-1 right-0 -translate-y-1/2 translate-x-1/2 z-10 flex size-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-                <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+              <span className="absolute top-1 right-0 -translate-y-1/2 translate-x-1/2 z-10 flex size-3 font-family-ibx">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-600 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-orange-400"></span>
               </span>
 
               {/* IMAGE */}
@@ -62,41 +62,48 @@ import { useTranslation } from 'react-i18next';
 
               {/* TOOLTIP */}
               {isHovered && (
-                <div>
-                  <div className='bg-[#fff] border-1 border-[#222] rounded-4xl absolute px-4 py-1.5'>update</div>
-                  <div className="absolute top-[1em] left-[4.5rem] bg-[#222] text-[#fff] border p-[1rem] rounded-[1rem] max-w-[20rem] whitespace-nowrap font-family-ibx">
-                    Hello 👋<br />
-                    {t('bonusMessage')}
+                <div className="absolute left-[4.5rem] top-0 font-family-source">
+                  {/* CONTAINER */}
+                  <div className="relative">
+                    {/* Small 'update' box - overlaps the big one */}
+                    <div className="absolute -top-3 left-8 bg-white border border-[#222] text-sm rounded-2xl px-3 py-1 z-10 shadow-md">
+                      update
+                    </div>
+
+                    {/* Larger tooltip */}
+                    <div className="bg-[#222] text-[#fff] border p-[1rem] pt-6 rounded-3xl max-w-150 whitespace-nowrap mt-4">
+                      Hello👋<br />
+                      {t('bonusMessage')}
+                    </div>
                   </div>
                 </div>
-              )}
-          </div>
-              <div className={`transition-all duration-300 ${
-                isScrolled 
-                  ? 'opacity-100 translate-x-0' 
-                  : 'opacity-0 translate-y-1 pointer-events-none'
-              }`}>
-                <h1 className="font-family-playfair text-4xl text-stone-950/80">Raimon.io</h1>
-              </div>
-              <div className='flex gap-2'>
-            <div className='bg-orange-100 dark:bg-zinc-700 p-2 font-family-ibx rounded-2xl'>
-              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToEnglish}>
-                EN
-              </button>
-              <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToJapanese}>
-                JP
-              </button>
+                )}
             </div>
-            <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
-              <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("light")}>
-                <FiSun />
-              </button>
-              <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("dark")}>
-                <LuMoonStar />
-              </button>
+            <div className={`justify-self-center transition-all duration-300 ${
+              isScrolled 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-y-1 pointer-events-none'
+            }`}>
+              <h1 className="font-family-playfair text-4xl text-stone-950/80">Raimon.io</h1>
             </div>
-
+            <div className='flex gap-2 justify-self-end'>
+              <div className='bg-orange-100 dark:bg-zinc-700 p-2 font-family-ibx rounded-2xl'>
+                <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToEnglish}>
+                  EN
+                </button>
+                <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToJapanese}>
+                  JA
+                </button>
               </div>
+              <div className='bg-orange-100 dark:bg-zinc-700 p-2 rounded-2xl'>
+                <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("light")}>
+                  <FiSun />
+                </button>
+                <button className='bg-transparent p-3 hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={() => handleMode("dark")}>
+                  <LuMoonStar />
+                </button>
+              </div>
+            </div>
         </header>           
     )
 }

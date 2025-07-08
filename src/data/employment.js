@@ -41,7 +41,7 @@ const employment = {
             technicalSkills: ["Database Management", "SQL", "Networking"]
         }
     ],
-    jp: [
+    ja: [
         {
             id: 1,
             title: "ALT英語講師",
