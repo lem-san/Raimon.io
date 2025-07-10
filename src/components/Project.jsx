@@ -70,7 +70,7 @@ export default function Project({ id, className = '' }) {
                 </Zoom>
                 </div>
                 <div className='pl-6 text-xs inline'>
-                    <h3 className="text-lg font-family-source font-medium pb-3 tracking-tight flex items-center">{entry.title}
+                    <h3 className="text-lg font-family-sourceRegular pb-3 tracking-tight flex items-center">{entry.title}
                         <IconContext.Provider value={{size:'1rem'}}>
                             <a href={entry.link} alt={entry.title} className='inline pl-2'><FaLink /></a>
                         </IconContext.Provider>
@@ -78,7 +78,7 @@ export default function Project({ id, className = '' }) {
                     <TruncateText text={entry.desc} charLimit={100} />
                     <ul className='pt-2'>
                         {entry.technicalSkills.map((skill, index) => (
-                            <li key={index} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
+                            <li key={index} className='list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-family-sourceBold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
                         ))}
                     </ul>
                 </div>

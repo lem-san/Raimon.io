@@ -60,9 +60,9 @@ export default function Certification ( {id, className=''} ) {
                     alt={entry.association}
                     className="w-30 h-full object-cover" 
                     />
-                    <div className='pl-6 text-xs relative transition-transform'>
-                        <h3 className="text-lg font-family-source font-medium tracking-tight ">{entry.accreditation}</h3>
-                        <h3 className="text-base font-family-source font-bold tracking-tight pb-2"><a href={entry.link}>{entry.association}</a></h3>
+                    <div className='pl-6 text-xs relative transition-transform font-family-ibm'>
+                        <h3 className="text-lg font-family-sourceRegular tracking-tight ">{entry.accreditation}</h3>
+                        <h3 className="text-base font-family-sourceBold tracking-tight pb-2"><a href={entry.link}>{entry.association}</a></h3>
                         <TruncateText text={entry.desc} charLimit={70} />
                         <div className="flex pt-3 items-center gap-3">
 
@@ -81,7 +81,7 @@ export default function Certification ( {id, className=''} ) {
                         {/* Progress Percentage — stays in place, just fades */}
                             <div
                                 className={clsx(
-                                'min-w-10 tracking-wide text-center text-xs font-bold rounded-md py-1 px-1.5 transition-opacity duration-300',
+                                'min-w-10 tracking-wide text-center text-xs font-family-ibm font-bold rounded-md py-1 px-1.5 transition-opacity duration-300',
                                 entry.progress === 100
                                     ? 'bg-emerald-200 text-emerald-700'
                                     : 'bg-amber-200 text-amber-800',

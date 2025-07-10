@@ -9,7 +9,7 @@ export default function Information({className = ''}) {
     const { t, i18n } = useTranslation()
 
     return (
-        <div className={`font-light font-family-ibx text-stone-950/80 scroll-smooth ${className}`}>
+        <div className={`font-light font-family-ibm text-stone-950/80 scroll-smooth ${className}`}>
             <h2 className='font-family-playfair text-4xl pt-4 pb-8'>About Me.</h2>
             <p className="pb-5 leading-7 text-sm">{t('infoAbout')}</p>
             <Employment id="employment" className="scroll-mt-30"/>

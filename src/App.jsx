@@ -62,11 +62,11 @@ import { useTranslation } from 'react-i18next';
 
               {/* TOOLTIP */}
               {isHovered && (
-                <div className="absolute left-[4.5rem] top-0 font-family-source">
+                <div className="absolute left-[4.5rem] top-0 font-family-sourceRegular">
                   {/* CONTAINER */}
                   <div className="relative">
                     {/* Small 'update' box - overlaps the big one */}
-                    <div className="absolute -top-3 left-8 bg-white border border-[#222] text-sm rounded-2xl px-3 py-1 z-10 shadow-md">
+                    <div className="absolute -top-3 left-8 bg-white border border-[#222] text-sm rounded-2xl px-3 py-1 z-10 shadow-md font-family-sourceBold">
                       update
                     </div>
 
@@ -87,7 +87,7 @@ import { useTranslation } from 'react-i18next';
               <h1 className="font-family-playfair text-4xl text-stone-950/80">Raimon.io</h1>
             </div>
             <div className='flex gap-2 justify-self-end'>
-              <div className='bg-orange-100 dark:bg-zinc-700 p-2 font-family-ibx rounded-2xl'>
+              <div className='bg-orange-100 dark:bg-zinc-700 p-2 font-family-ibm rounded-2xl'>
                 <button className='bg-transparent px-3.5 py-3 text-xs hover:bg-orange-200 dark:hover:bg-zinc-100/10 dark:text-white rounded-xl transition-colors duration-200 ease-linear' onClick={switchToEnglish}>
                   EN
                 </button>

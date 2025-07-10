@@ -79,21 +79,21 @@ export default function Employment( {id, className=''} ) {
             />
 
             <div className="relative z-10 flex p-6 transition-transform hover:bg-orange-500/20">
-              <p className="text-sm font-family-source font-medium tracking-tight pt-1 whitespace-nowrap min-w-[10em]">{entry.dates}</p>
+              <p className="text-sm font-family-sourceRegular tracking-tight pt-1 whitespace-nowrap min-w-[10em]">{entry.dates}</p>
               <div className="text-xs">
-                <h3 className="text-lg font-family-source font-medium pb-3 tracking-tight">
-                  {entry.title}・<a className="font-bold" href={entry.link}>{entry.company}</a>
+                <h3 className="text-lg font-family-sourceRegular pb-3 tracking-tight">
+                  {entry.title}・<a className="font-family-sourceBold" href={entry.link}>{entry.company}</a>
                 </h3>
                 <TruncateText text={entry.desc} charLimit={200} />
                 <div className='pt-2'>
                   <ul>
                     {entry.softSkills.map((skill, i) => (
-                      <li key={i} className='font-family-source list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
+                      <li key={i} className='font-family-sourceBold list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
                     ))}
                   </ul>
                   <ul>
                     {entry.technicalSkills.map((skill, i) => (
-                      <li key={i} className='font-family-source list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] font-bold text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
+                      <li key={i} className='font-family-sourceBold list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
                     ))}
                   </ul>
                 </div>  

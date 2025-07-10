@@ -3,9 +3,37 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-family-playfair: Playfair Display, sans-serif;
-  --font-family-source: Source Code Pro, monospace; 
-  --font-family-ibx: IBM Plex Sans, sans-serif;
+  --font-family-playfair: 'playfair', sans-serif;
+  --font-family-ibm: 'ibm', sans-serif;
+  --font-family-sourceRegular: 'sourceRegular', monospace; 
+  --font-family-sourceBold: 'sourceBold', monospace; 
+}
+
+@font-face {
+  font-family: 'playfair';
+  src: url('/fonts/PlayfairDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ibm';
+  src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sourceRegular';
+  src: url('/fonts/SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sourceBold';
+  src: url('/fonts/SourceCodePro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 html {

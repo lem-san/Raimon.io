@@ -8,12 +8,12 @@ export default function TruncateText({ text, charLimit = 100 }) {
   const { t, i18n } = useTranslation()
 
   return (
-    <p className="leading-6 inline">
+    <p className="leading-6 inline font-family-ibm font-light">
       {visibleText}
       {shouldTruncate && !expanded && (
         <span
           onClick={() => setExpanded(true)}
-          className="font-bold text-xs cursor-pointer inline"
+          className="font-family-ibm font-bold text-xs cursor-pointer inline"
         >
           {' '}{t("readMore")}
         </span>
