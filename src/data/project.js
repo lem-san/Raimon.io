@@ -1,5 +1,5 @@
-import quickfire from '../assets/quickfire.png'
-import website from '../assets/website.png'
+import quickfire from '../assets/quickfire.webp'
+import website from '../assets/website.webp'
 
 const project = {
   en: [

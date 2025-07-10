@@ -2,7 +2,7 @@ import './index.css'
 import Profile from './components/Profile'
 import Info from './components/Info'
 import { useState, useEffect, useRef } from 'react'
-import logo from './assets/logo.svg'
+import logo from './assets/logo.webp'
 import { FiSun } from "react-icons/fi";
 import { LuMoonStar } from "react-icons/lu";
 import '../i18n';
