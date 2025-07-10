@@ -11,34 +11,31 @@
 
 @font-face {
   font-family: 'playfair';
-  src: url('/fonts/PlayfairDisplay-Black.ttf') format('truetype');
-  font-display: auto;
+  src: url('/fonts/PlayfairDisplay-Black.woff2') format('woff2');
+  font-display: swap;
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ibm';
-  src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype');
-    font-display: auto;
-
+  src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.woff2') format('woff2');
+  font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'sourceRegular';
-  src: url('/fonts/SourceCodePro-Regular.ttf') format('truetype');
-    font-display: auto;
-
+  src: url('/fonts/SourceCodePro-Regular.woff2') format('woff2');
+  font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'sourceBold';
-  src: url('/fonts/SourceCodePro-Bold.ttf') format('truetype');
-    font-display: auto;
-
+  src: url('/fonts/SourceCodePro-Bold.woff2') format('woff2');
+  font-display: swap;
   font-weight: 700;
   font-style: normal;
 }
