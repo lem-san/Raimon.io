@@ -1,6 +1,6 @@
-import swinburne from '../assets/swinburne.svg'
-import jlpt from '../assets/jlpt.svg'
-import tefl from '../assets/tefl.svg'
+import swinburne from '../assets/swinburne.png'
+import jlpt from '../assets/jlpt.png'
+import tefl from '../assets/tefl.png'
 
 const certification = {
     en: [

@@ -13,7 +13,7 @@ export default function TruncateText({ text, charLimit = 100 }) {
       {shouldTruncate && !expanded && (
         <span
           onClick={() => setExpanded(true)}
-          className="font-family-ibm font-bold text-xs cursor-pointer inline"
+          className="font-family-ibm font-bold text-xs cursor-pointer inline dark:text-gray-100 "
         >
           {' '}{t("readMore")}
         </span>

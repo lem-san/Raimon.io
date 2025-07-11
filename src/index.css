@@ -61,6 +61,11 @@ html {
 }
 
 [data-rmiz-modal-img] {
-  border: solid 0.3rem rgb(239, 192, 126);
+  border: solid 0.3rem #D4A373;
+  border-radius: 1.5rem;
+}
+
+.dark [data-rmiz-modal-img] {
+  border: solid 0.3rem rgb(95, 208, 146);
   border-radius: 1.5rem;
 }

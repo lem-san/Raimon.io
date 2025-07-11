@@ -53,7 +53,7 @@ export default function Employment( {id, className=''} ) {
 
   return (
     <div id={id} className={clsx(className)}>
-      <h2 className="font-family-playfair text-4xl pt-4">Employment.</h2>
+      <h2 className="font-family-playfair text-4xl pt-4 dark:text-gray-100 ">Employment.</h2>
       {employData.map((entry, index) => {
         const isVisible = visible[index]
 
@@ -64,36 +64,28 @@ export default function Employment( {id, className=''} ) {
             ref={el => (entryRefs.current[index] = el)}
             onMouseMove={handleMouseMove}
             className={clsx(
-              'relative my-4 rounded-xl backdrop-blur group duration-[500ms] ease-out overflow-hidden hover:shadow-xl',
+              'relative my-4 rounded-xl backdrop-blur group duration-[500ms] ease-out overflow-hidden hover:bg-[#FAEDCD] hover:shadow-md dark:hover:bg-zinc-700/50',
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             )}
                 onMouseEnter={() => setIsHovered(index)}
                 onMouseLeave={() => setIsHovered(null)}
           >
-            {/* Spotlight gradient layer */}
-            <div
-              className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100 "
-              style={{
-                background: `radial-gradient(400px circle at ${mouse.x}px ${mouse.y}px, white, transparent 80%)`,
-              }}
-            />
-
-            <div className="relative z-10 flex p-6 transition-transform hover:bg-orange-500/20">
-              <p className="text-sm font-family-sourceRegular tracking-tight pt-1 whitespace-nowrap min-w-[10em]">{entry.dates}</p>
+            <div className="relative z-10 flex p-6 transition-transform">
+              <p className="text-sm font-family-sourceRegular tracking-tight pt-1 dark:text-gray-100 whitespace-nowrap min-w-[10em]">{entry.dates}</p>
               <div className="text-xs">
-                <h3 className="text-lg font-family-sourceRegular pb-3 tracking-tight">
-                  {entry.title}・<a className="font-family-sourceBold" href={entry.link}>{entry.company}</a>
+                <h3 className="text-lg font-family-sourceRegular dark:text-gray-100 pb-3 tracking-tight">
+                  {entry.title}・<a className="font-family-sourceBold " href={entry.link}>{entry.company}</a>
                 </h3>
                 <TruncateText text={entry.desc} charLimit={200} />
                 <div className='pt-2'>
                   <ul>
                     {entry.softSkills.map((skill, i) => (
-                      <li key={i} className='font-family-sourceBold list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] text-[0.9em] bg-emerald-300/50 text-emerald-700 rounded-full'>{skill}</li>
+                      <li key={i} className='font-family-sourceBold list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] text-[0.9em] bg-emerald-300/40 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 dark:font-family-sourceRegular rounded-full'>{skill}</li>
                     ))}
                   </ul>
                   <ul>
                     {entry.technicalSkills.map((skill, i) => (
-                      <li key={i} className='font-family-sourceBold list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] text-[0.9em] bg-rose-400/50 text-rose-800 rounded-full'>{skill}</li>
+                      <li key={i} className='font-family-sourceBold list-none mt-[0.6em] mr-[0.6em] inline-block py-[0.5em] px-[1.5em] text-[0.9em] bg-rose-400/50 text-rose-800 dark:bg-rose-900/40 dark:text-rose-300 dark:font-family-sourceRegular rounded-full'>{skill}</li>
                     ))}
                   </ul>
                 </div>  
