@@ -60,7 +60,7 @@ export default function Project({ id, className = '' }) {
                 onMouseLeave={() => setIsHovered(null)}
                 id={id}
             >
-                <div className="w-[200px] h-[113px] flex-shrink-0 overflow-hidden rounded-lg border-4 border-zinc-900/10 hover:bg-[#D4A373] dark:hover:border-emerald-300/90 duration-500 hover:brightness-80">
+                <div className="w-50 h-28 flex-shrink-0 overflow-hidden rounded-lg border-4 border-zinc-900/10 hover:bg-[#D4A373] dark:hover:border-emerald-300/90 duration-500 hover:brightness-80">
                 <Zoom zoomMargin={100}>
                     <img 
                     src={entry.thumbnail} 

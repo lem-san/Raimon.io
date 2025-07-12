@@ -64,7 +64,7 @@ export default function Employment( {id, className=''} ) {
             ref={el => (entryRefs.current[index] = el)}
             onMouseMove={handleMouseMove}
             className={clsx(
-              'relative my-4 rounded-xl backdrop-blur group duration-[500ms] ease-out overflow-hidden hover:bg-[#FAEDCD] hover:shadow-md dark:hover:bg-zinc-700/50',
+              'relative my-4 rounded-xl group duration-[500ms] ease-out overflow-hidden hover:bg-[#FAEDCD] hover:shadow-md dark:hover:bg-zinc-700/50',
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             )}
                 onMouseEnter={() => setIsHovered(index)}

@@ -48,7 +48,7 @@ export default function Certification ( {id, className=''} ) {
                 key={entry.id} 
                 data-index={index}
                 ref={el => (entryRefs.current[index] = el)}
-                className={clsx('relative min-h-45 backdrop-blur group duration-[500ms] z-10 my-4 flex items-center p-6 rounded-xl ease-out overflow-hidden hover:bg-[#FAEDCD] hover:shadow-md dark:hover:bg-zinc-700/50',
+                className={clsx('relative min-h-45 group duration-[500ms] z-10 my-4 flex items-center p-6 rounded-xl ease-out overflow-hidden hover:bg-[#FAEDCD] hover:shadow-md dark:hover:bg-zinc-700/50',
                             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 )}
                 onMouseEnter={() => setIsHovered(index)}

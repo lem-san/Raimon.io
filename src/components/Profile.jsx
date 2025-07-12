@@ -15,7 +15,7 @@ export default function Profile({ className = '' }) {
 
     return (
         <div className={`text-stone-950/80 dark:text-gray-400 max-w-[50%] ${className}`}>
-            <h1 className="font-family-playfair dark:text-gray-100 text-5xl py-[1rem]">Raimon Barragans</h1>
+            <h1 className="font-family-playfair dark:text-gray-100 py-[1rem] text-5xl">Raimon Barragans</h1>
             <TypeAnimation
                 sequence={[
                     // Same substring at the start will only be typed out once, initially
@@ -41,15 +41,15 @@ export default function Profile({ className = '' }) {
                 </a>
             </div>
             <div>
-                <ul className="pt-[20px] pl-0 ml-0 flex list-none group-hover:scale-[1.01]">
+                <ul className="pt-6 pl-0 ml-0 flex list-none group-hover:scale-[1.01] gap-5">
                     <IconContext.Provider value={{size:'1.5rem'}}>
-                    <li className="pr-[10px] hover:scale-[1.3] transition-all hover:text-[#D4A373] dark:hover:text-emerald-400">
+                    <li className="hover:scale-[1.3] transition-all hover:text-[#D4A373] dark:hover:text-emerald-400">
                         <a href="https://github.com/lem-san" alt="Github"><PiGithubLogoLight className="w-8"/></a>
                     </li>
-                    <li className="px-[10px] hover:scale-[1.3] transition-all hover:text-[#D4A373] dark:hover:text-emerald-400">
+                    <li className="hover:scale-[1.3] transition-all hover:text-[#D4A373] dark:hover:text-emerald-400">
                         <a href="https://www.linkedin.com/in/raimon-barragans/" alt="LinkedIn"><FaLinkedin className="w-8"/></a>
                     </li>
-                    <li className="px-[10px] hover:scale-[1.3] transition-all hover:text-[#D4A373] dark:hover:text-emerald-400">
+                    <li className="hover:scale-[1.3] transition-all hover:text-[#D4A373] dark:hover:text-emerald-400">
                         <a href="mailto:raimon.barragans@gmail.com" alt="Mail"><CiMail className="w-8"/></a>
                     </li>
                     </IconContext.Provider>

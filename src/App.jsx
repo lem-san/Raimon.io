@@ -40,7 +40,7 @@ import { useTranslation } from 'react-i18next';
     }
 
     return (
-        <header className={`z-50 bg-amber-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full grid grid-cols-3 items-center border-b-2 border-[#D4A373] dark:border-zinc-700 px-[30px] py-[20px] 
+        <header className={`z-50 bg-amber-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear fixed w-full grid grid-cols-3 items-center border-b-2 border-[#D4A373] dark:border-zinc-700 px-10 py-5  
           ${isScrolled ? '' : 'border-hidden shadow-none dark:border-hidden'} 
         `}>
             <div className='relative justify-self-start'
@@ -55,7 +55,7 @@ import { useTranslation } from 'react-i18next';
 
               {/* IMAGE */}
               <img
-                className="w-[50px] transition-transform duration-100 ease-in hover:scale-150"
+                className="w-12 transition-transform duration-100 ease-in hover:scale-150"
                 src={logo}
                 alt="logo"
               />
@@ -114,7 +114,7 @@ function App() {
     <>
       <main className="bg-amber-50 dark:bg-zinc-800 transition-colors duration-200 ease-linear scroll-smooth">
         <Nav />
-        <div className="pt-[150px] flex flex-row pb-10">
+        <div className="pt-38 flex flex-row pb-10">
           <div className="w-[21%] flex flex-column">
             <Profile className="w-[80%] fixed pl-[18%]" />
           </div>

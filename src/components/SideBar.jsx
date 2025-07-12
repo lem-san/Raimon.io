@@ -4,7 +4,7 @@ export default function SideBar({ active }) {
 
   return (
     <>
-    <div className="flex flex-col sticky pt-53 text-sm font-family-ibm max-w-[30%]">
+    <div className="flex flex-col sticky pt-[40%] text-sm font-family-ibm max-w-[30%]">
         {sections.map((entry) => 
           <div className="flex items-center gap-3">
             <ul className="relative border-s border-gray-300 dark:border-gray-400/60">                  
@@ -18,7 +18,7 @@ export default function SideBar({ active }) {
             </ul>
           </div>
         )}
-        <div className="fixed left-78 top-212 w-5 h-10 bg-amber-50 duration-200 dark:bg-zinc-800 rounded-full"></div>
+        <div className="absolute left-[-10%] top-[90%] w-10 h-11 bg-amber-50 duration-200 dark:bg-zinc-800"></div>
     </div>
     </>
   );
